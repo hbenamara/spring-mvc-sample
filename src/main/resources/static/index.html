@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, shrink-to-fit=no, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>Welcome to DotSub File Uploader</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/simple-sidebar.css" rel="stylesheet">
+<link href="css/fileinput.min.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand"><a href="http://dotsub.com/"
+					class="pull-left"><img src="img/logo.png"></a></li>
+				<li><a href="/"><span class="glyphicon glyphicon-upload"></span>
+						Upload New File (s)</a></li>
+				<li><a href="list_files.html"><span
+						class="glyphicon glyphicon-list"></span> List of Files</a></li>
+				<li><a href="contact.html"><span
+						class="glyphicon glyphicon-envelope"></span> Contact</a></li>
+			</ul>
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<input id="input-700" name="kartik-input-700[]" type="file"
+							multiple class="file-loading">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/canvas-to-blob.min.js"></script>
+	<script src="js/purify.min.js"></script>
+	<script src="js/sortable.min.js"></script>
+	<script src="js/fileinput.min.js"></script>
+	<script>
+		$("#input-700").fileinput({
+			uploadUrl : "/uploadFile/", // server upload action
+			uploadAsync : true,
+			maxFileCount : 5
+		});
+	</script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/service/file_service.js"></script>
+	<script src="js/controller/file_controller.js"></script>
+</body>
+
+</html>
